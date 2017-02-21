@@ -1,0 +1,30 @@
+.header {
+  display: block;
+  position: absolute;
+  padding: 0 60px;
+  box-sizing: border-box;
+  width: 100%;
+  top: 80px;
+  transition: .3s ease-out;
+  &__left {
+    display: block;
+    float: left;
+    width: 33.33%;
+  }
+  &__center {
+    display: block;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+  }
+  &__right {
+    display: block;
+    float: left;
+    width: 33.33%;
+    text-align: right;
+  }
+  &.top {
+    top: 40px;
+    transition: .3s ease-out;
+  }
+}
