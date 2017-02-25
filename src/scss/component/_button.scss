@@ -1,0 +1,59 @@
+.button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  padding: 10px;
+  color: $base-1;
+  font-weight: bold;
+  position: relative;
+  background: none;
+  &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    z-index: -1;
+    background-color: $base-5;
+    transition: .3s ease-out;
+  }
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    z-index: -1;
+    background-color: $base-5;
+    transition: .3s ease-out;
+  }
+  i {
+    margin-left: 20px;
+    vertical-align: middle;
+    color: $base-4;
+    transition: .3s ease-out;
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &:hover {
+    &:before {
+      width: 40%;
+      transition: .3s ease-in;
+    }
+    &:after {
+      width: 0%;
+      transition: .3s ease-in;
+    }
+    i {
+      color: $base-1;
+      transition: .3s ease-in;
+    }
+  }
+}

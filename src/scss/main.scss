@@ -1,11 +1,29 @@
-@import "fa/font-awesome.scss";
-
 @import "base/colors.scss";
 @import "base/media.scss";
 @import "base/base.scss";
+
+@import "fa/font-awesome.scss";
+@import "animations/animate.scss";
+@import "animations/delay.scss";
 @import "base/greed.scss";
+
+@import "component/socials.scss";
+@import "component/arrows.scss";
+@import "component/sub-title.scss";
+@import "component/link.scss";
+@import "component/input.scss";
+@import "component/button.scss";
+@import "component/radio.scss";
+@import "component/list.scss";
+@import "component/slider.scss";
+
 
 @import "layout/header.scss";
 @import "layout/footer.scss";
+@import "layout/wrap.scss";
+@import "layout/slide.scss";
+@import "layout/greed.scss";
 
 @import "module/slide-1.scss";
+@import "module/catalog.scss";
+@import "module/benefit.scss";

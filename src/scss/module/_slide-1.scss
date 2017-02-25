@@ -1,11 +1,45 @@
 .slide-1 {
   padding: 40px;
   box-sizing: border-box;
-  &__wrap {
+  &__back {
     box-sizing: border-box;
     display: block;
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom right, #e4ebeb, #fff, #e4ebeb);
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 113px;
+    background-size: 455px;
+  }
+  &__wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 3em;
+    color: $base-2;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 1.6em;
+    margin-bottom: 90px;
+    text-transform: uppercase;
+  }
+  p {
+    color: $base-3;
+    margin-bottom: 10px;
+    text-transform: uppercase;
   }
 }

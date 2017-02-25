@@ -14,6 +14,16 @@ gulp.task('styles', function() {
     .pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('html', function(){
+  gulp.src('./')
+  .pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('js', function(){
+  gulp.src('./')
+  .pipe(browserSync.reload({stream:true}));
+});
+
 gulp.task('serve', function() {
   browserSync.init({
     server: {
@@ -28,7 +38,8 @@ gulp.task('serve', function() {
   .pipe(gulp.dest("../css"))
 
   gulp.watch('./scss/**/*.scss', ['styles']);
-  gulp.watch('../js/*.js', browserSync.reload({stream: true}));
+  gulp.watch('./../js/*.js', ['js']);
+  gulp.watch('./../index.html', ['html']);
 });
 
 gulp.task('default', ['serve']);

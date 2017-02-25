@@ -1,0 +1,14 @@
+.list {
+  text-align: left;
+  &__title {
+    margin-bottom: 20px;
+
+    p {
+      color: $base-4;
+      font-weight: bold;
+    }
+  }
+  &__item {
+    margin-bottom: 10px;
+  }
+}

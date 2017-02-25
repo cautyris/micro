@@ -1,0 +1,22 @@
+.col-half {
+  height: 100%;
+  width: 49.99%;
+  float: left;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.col-center {
+  // &:before {
+  //   display: inline-block;
+  //   content: '';
+  //   vertical-align: middle;
+  //   height: 100%;
+  //   width: 0;
+  // }
+  // * {
+  //   vertical-align: middle;
+  // }
+}

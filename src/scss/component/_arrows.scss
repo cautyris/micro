@@ -1,0 +1,22 @@
+.arrows {
+  margin-top: -41px;
+  &__item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    i {
+      color: $base-4;
+      transition: .2s ease-in;
+      font-size: 20px;
+      &:hover {
+        transition: .2s ease-in;
+        color: $base-1;
+      }
+    }
+  }
+  &__dev {
+    color: $base-4;
+    width: 17px;
+  }
+}

@@ -17,7 +17,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
-	font-family: 'Roboto';
+	font-family: 'Fira Sans', sans-serif;
+	color: $base-1;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -46,5 +47,5 @@ i {
 	vertical-align: middle;
 }
 html {
-	font-size: 12pt;
+	font-size: 11pt;
 }
