@@ -18,12 +18,14 @@ $.fn.scrollplugin = function(params) {
     fadeOutTime = params.fadeOutTime;
   }
 
+///scroll
   if (document.addEventListener) {
       document.addEventListener("mousewheel", MouseWheelHandler(), false);
       document.addEventListener("DOMMouseScroll", MouseWheelHandler(), false);
   } else {
       sq.attachEvent("onmousewheel", MouseWheelHandler());
   }
+
 
   function MouseWheelHandler() {
     return function (e) {

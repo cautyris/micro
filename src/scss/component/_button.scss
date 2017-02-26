@@ -56,4 +56,9 @@
       transition: .3s ease-in;
     }
   }
+  &-half {
+    box-sizing: border-box;
+    width: 40.99%;
+    margin-left: 4.99%;
+  }
 }

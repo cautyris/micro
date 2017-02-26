@@ -1,0 +1,46 @@
+.parts {
+  height: calc(100% - 230px);
+
+  &__title {
+    padding-top: 120px;
+    margin-bottom: 10px;
+    h2 {
+      color: $base-2;
+      font-size: 2em;
+      font-weight: bold;
+      line-height: 1.2em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  &__list {
+
+  }
+  &__radio {
+    margin-bottom: 20px;
+    text-align: left;
+    input {
+      display: none;
+      &:checked + label {
+          transition: .3s ease-in;
+          color: $base-1;
+      }
+    }
+    label {
+      font-weight: bold;
+      cursor: pointer;
+      color: $base-4;
+      text-align: left;
+    }
+  }
+  &__liyer {
+    display: none;
+    position: absolute;
+  }
+  &__container {
+    position: relative;
+    padding-top: 80px;
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -5,6 +5,8 @@
     <title>Micro</title>
     <script src="js/jquery-1.9.1.js" charset="utf-8"></script>
     <script src="js/jquery-ui.js" charset="utf-8"></script>
+    <script src="js/hammer.min.js" charset="utf-8"></script>
+    <script src="js/jquery.hammer.js" charset="utf-8"></script>
     <script src="js/scrollplugin.js" charset="utf-8"></script>
     <script src="js/main.js" charset="utf-8"></script>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
@@ -179,49 +181,18 @@
       </section>
       <section class="sp-slide slide wrap" id="slide-7">
         <div class="slide__wrap">
-          <div class="benefit__title">
-            <h2>Наши ключевые выгоды</h2>
+          <div class="col-half col-center">
+            <div class="slide__base-img">
+              <img class="animated fadeInLeft" src="img/img7-min.png" alt="" />
+            </div>
           </div>
-          <div class="benefit contain">
-            <div class="col-6 benefit__item animated fadeInUp">
-              <a class="benefit__item_number-1" href="">
-                <div class="benefit__icon">
-                  <img src="img/img9_1-min.png" alt="" />
-                </div>
-                <div class="benefit__descr">
-                  <span>Описание преимущества.</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-6 benefit__item animated fadeInUp delay-1">
-              <a class="benefit__item_number-2" href="">
-                <div class="benefit__icon">
-                  <img src="img/img9_2-min.png" alt="" />
-                </div>
-                <div class="benefit__descr">
-                  <span>Описание преимущества.</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-6 benefit__item animated fadeInUp delay-2">
-              <a class="benefit__item_number-3" href="">
-                <div class="benefit__icon">
-                  <img src="img/img9_3-min.png" alt="" />
-                </div>
-                <div class="benefit__descr">
-                  <span>Описание преимущества.</span>
-                </div>
-              </a>
-            </div>
-            <div class="col-6 benefit__item animated fadeInUp delay-3">
-              <a class="benefit__item_number-4" href="">
-                <div class="benefit__icon">
-                  <img src="img/img9_4-min.png" alt="" />
-                </div>
-                <div class="benefit__descr">
-                  <span>Описание преимущества.</span>
-                </div>
-              </a>
+          <div class="col-half">
+            <div class="slide__subtitle animated fadeInDown"><p>Явные преимущества микроскопа</p></div>
+            <h2 class="slide__title animated fadeInUp">Возможность подключения<br> фото и видео камеры</h2>
+            <div class="slide__info animated fadeInUp">
+              <p>
+                Чем лучше вы видите проблему - тем успешнее ее решаете Увеличен
+              </p>
             </div>
           </div>
         </div>
@@ -230,11 +201,111 @@
         <div class="slide__wrap">
           <div class="col-half col-center">
             <div class="slide__base-img">
-              <img class="animated fadeInLeft" src="img/img5-min.png" alt="" />
+              <img class="animated fadeInLeft" src="img/img8_2-min.png" alt="" />
             </div>
           </div>
           <div class="col-half">
-            <h2 class="slide__title animated fadeInUp">Запросите коммерческое<br> предложение прямо сейчас</h2>
+            <h2 class="slide__title animated fadeInUp">Заявка на подбор<br>микроскопа</h2>
+            <div class="slide__info animated fadeInUp">
+              <p>
+                Чем лучше вы видите проблему - тем успешнее ее решаете Увеличен
+              </p>
+            </div>
+            <div class="slide__row animated fadeInUp delay-1">
+              <input type="text" placeholder="Ваше имя" class="input">
+              <input type="text" placeholder="Ваш телефон" class="input">
+            </div>
+            <div class="slide__row animated fadeInUp delay-2">
+              <button class="button"><span>Получить предложение</span><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sp-slide slide wrap" id="slide-9">
+        <div class="slide__wrap">
+          <div class="slide__center-title">
+            <h2>Наши ключевые выгоды</h2>
+          </div>
+          <div class="benefit contain">
+            <div class="col-6">
+              <div class="benefit__item animated fadeInUp">
+                <a class="benefit__item_number-1" href="">
+                  <div class="benefit__icon">
+                    <img src="img/img9_1-min.png" alt="" />
+                  </div>
+                  <div class="benefit__descr">
+                    <span>Описание преимущества.</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="benefit__item animated fadeInUp delay-1">
+                <a class="benefit__item_number-2" href="">
+                  <div class="benefit__icon">
+                    <img src="img/img9_2-min.png" alt="" />
+                  </div>
+                  <div class="benefit__descr">
+                    <span>Описание преимущества.</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="benefit__item animated fadeInUp delay-2">
+                <a class="benefit__item_number-3" href="">
+                  <div class="benefit__icon">
+                    <img src="img/img9_3-min.png" alt="" />
+                  </div>
+                  <div class="benefit__descr">
+                    <span>Описание преимущества.</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="benefit__item animated fadeInUp delay-3">
+                <a class="benefit__item_number-4" href="">
+                  <div class="benefit__icon">
+                    <img src="img/img9_4-min.png" alt="" />
+                  </div>
+                  <div class="benefit__descr">
+                    <span>Описание преимущества.</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sp-slide slide wrap" id="slide-10">
+        <div class="slide__wrap">
+          <div class="col-half col-center">
+            <div class="slide__base-img">
+              <img class="animated fadeInLeft" src="img/img10-min.png" alt="" />
+            </div>
+          </div>
+          <div class="col-half">
+            <div class="slide__subtitle animated fadeInDown"><p>Явные преимущества микроскопа</p></div>
+            <h2 class="slide__title animated fadeInUp">В 1,5 раз больше пациентов</h2>
+            <div class="slide__info animated fadeInUp delay-1">
+              <p>
+                Чем лучше вы видите проблему - тем успешнее ее решаете Увеличен
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sp-slide slide wrap" id="slide-11">
+        <div class="slide__wrap">
+          <div class="col-half col-center">
+            <div class="slide__base-img">
+              <img class="animated fadeInLeft" src="img/img11-min.png" alt="" />
+            </div>
+          </div>
+          <div class="col-half">
+            <h2 class="slide__title animated fadeInUp">Калькулятор окупаемости<br>микроскопа</h2>
             <div class="slide__info animated fadeInUp">
               <p>
                 Чем лучше вы видите проблему - тем успешнее ее решаете Увеличен
@@ -244,7 +315,7 @@
               <div class="col-6">
                 <ul class="list">
                   <li class="list__title">
-                    <p>Заголовок списка</p>
+                    <p>Выберите тип микроскопа:</p>
                   </li>
                   <li class="list__item">
                     <input class="radio" type="radio" name="radio-1" id="radio-1">
@@ -256,9 +327,37 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-6"></div>
+              <div class="col-6">
+                <ul class="list">
+                  <li class="list__title">
+                    <p>Среднее количество пациентов в день:</p>
+                  </li>
+                  <li class="list__item">
+                    <input class="radio" type="radio" name="radio-2" id="radio-2-1">
+                    <label class="radio__label" for="radio-2-1">10</label>
+                  </li>
+                  <li class="list__item">
+                    <input class="radio" type="radio" name="radio-2" id="radio-2-2">
+                    <label class="radio__label" for="radio-2-2">100</label>
+                  </li>
+                  <li class="list__item">
+                    <input class="radio" type="radio" name="radio-2" id="radio-2-3">
+                    <label class="radio__label" for="radio-2-3">200</label>
+                  </li>
+                  <li class="list__item">
+                    <input class="radio" type="radio" name="radio-2" id="radio-2-4">
+                    <label class="radio__label" for="radio-2-4">500</label>
+                  </li>
+                  <li class="list__item">
+                    <input class="radio" type="radio" name="radio-2" id="radio-2-5">
+                    <label class="radio__label" for="radio-2-5">1000</label>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="slide__row animated fadeInUp delay-2">
+              <div class="slider__min">0</div>
+              <div class="slider__max">1000</div>
               <div id="slider"></div>
             </div>
             <div class="slide__row animated fadeInUp delay-2">
@@ -267,6 +366,164 @@
           </div>
         </div>
       </section>
+
+      <section class="sp-slide slide wrap" id="slide-12">
+        <div class="slide__wrap">
+          <div class="col-half col-center">
+            <div class="slide__base-img">
+              <img class="animated fadeInLeft" src="img/img12-min.png" alt="" />
+            </div>
+          </div>
+          <div class="col-half">
+            <h2 class="slide__title animated fadeInUp">Скачайте презентацию<br>микроскопа</h2>
+            <div class="slide__info animated fadeInUp">
+              <p>
+                Чем лучше вы видите проблему - тем успешнее ее решаете Увеличен
+              </p>
+            </div>
+            <div class="slide__row animated fadeInUp delay-1">
+              <input type="text" placeholder="Ваше имя" class="input">
+              <input type="text" placeholder="Ваш телефон" class="input">
+            </div>
+            <div class="slide__row animated fadeInUp delay-2">
+              <input type="text" placeholder="Електронная почта" class="input">
+              <button class="button button-half"><span>Получить предложение</span><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sp-slide slide wrap" id="slide-13">
+        <div class="slide__wrap">
+          <div class="parts__title">
+            <h2>Структура микроскопа</h2>
+          </div>
+          <div class="parts contain">
+            <div class="col-half col-center">
+              <ul class="parts__list">
+                <li class="parts__radio">
+                  <input type="radio" checked="true" name="part" id="part-1" data-target="#liyer-1">
+                  <label for="part-1">Часть 1</label>
+                </li>
+                <li class="parts__radio">
+                  <input type="radio" name="part" id="part-2" data-target="#liyer-2">
+                  <label for="part-2">Часть 2</label>
+                </li>
+                <li class="parts__radio">
+                  <input type="radio" name="part" id="part-3" data-target="#liyer-3">
+                  <label for="part-3">Часть 3</label>
+                </li>
+                <li class="parts__radio">
+                  <input type="radio" name="part" id="part-4" data-target="#liyer-4">
+                  <label for="part-4">Часть 4</label>
+                </li>
+                <li class="parts__radio">
+                  <input type="radio" name="part" id="part-5" data-target="#liyer-5">
+                  <label for="part-5">Часть 5</label>
+                </li>
+              </ul>
+            </div>
+            <div class="col-half col-center">
+              <div class="slide__base-img parts__container animated fadeInRight">
+                <div class="parts__liyer" id="liyer-1">
+                  <img class="" src="img/img5-min.png" alt="" />
+                </div>
+                <div class="parts__liyer" id="liyer-2">
+                  <img class="" src="img/img13-min.png" alt="" />
+                </div>
+                <div class="parts__liyer" id="liyer-3">
+                  <img class="" src="img/img14-min.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sp-slide slide wrap" id="slide-14">
+        <div class="slide__wrap">
+          <div class="col-half col-center">
+            <div class="slide__base-img">
+              <img class="animated fadeInLeft" src="img/img14-min.png" alt="" />
+            </div>
+          </div>
+          <div class="col-half">
+            <div class="slide__text animated fadeInUp"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Proin eget tortor risus. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat.</p></div>
+            <div class="slide__author animated fadeInUp"><p>Константин Гребенщиков</p></div>
+            <div class="slide__author-post animated fadeInUp delay-1">
+              <p>
+                Руководитель компании
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sp-slide slide wrap" id="slide-15">
+        <div class="slide__wrap">
+          <div class="slide__center-title">
+            <h2>Что входит в комплект</h2>
+          </div>
+          <div class="complect contain">
+            <div class="col-4 complect__item animated fadeInUp ">
+              <div class="complect__img"><img src="img/img15-min.png" alt=""></div>
+              <div class="complect__name">
+                <p>Название элемента</p>
+              </div>
+            </div>
+            <div class="col-4 complect__item animated fadeInUp delay-1">
+              <div class="complect__img"><img src="img/img15-min.png" alt=""></div>
+              <div class="complect__name">
+                <p>Название элемента</p>
+              </div>
+            </div>
+            <div class="col-4 complect__item animated fadeInUp delay-2">
+              <div class="complect__img"><img src="img/img15-min.png" alt=""></div>
+              <div class="complect__name">
+                <p>Название элемента</p>
+              </div>
+            </div>
+            <div class="col-4 complect__item animated fadeInUp ">
+              <div class="complect__img"><img src="img/img15-min.png" alt=""></div>
+              <div class="complect__name">
+                <p>Название элемента</p>
+              </div>
+            </div>
+            <div class="col-4 complect__item animated fadeInUp delay-1">
+              <div class="complect__img"><img src="img/img15-min.png" alt=""></div>
+              <div class="complect__name">
+                <p>Название элемента</p>
+              </div>
+            </div>
+            <div class="col-4 complect__item animated fadeInUp delay-2">
+              <div class="complect__img"><img src="img/img15-min.png" alt=""></div>
+              <div class="complect__name">
+                <p>Название элемента</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sp-slide slide wrap" id="slide-16">
+        <div class="slide__wrap">
+          <div class="col-half col-center">
+            <div class="slide__base-img">
+              <div id="map"></div>
+            </div>
+          </div>
+          <div class="col-half">
+            <h2 class="slide__title">
+              Как связаться с нами
+            </h2>
+            <div class="slide__row animated fadeInUp">Телефон: <a href="" class="link"><b>8 999 800 80-80</b></a></div>
+            <div class="slide__row animated fadeInUp">Электронная почта: <a href="" class="link"><b>mail@mail.ru</b></a></div>
+            <div class="slide__row animated fadeInUp"><a href="" class="link"><b>Viber</b></a>  <a href="" class="link"><b>Whatsapp</b></a>  <a href="" class="link"><b>Telegram</b></a></div>
+            <div class="slide__info animated fadeInUp delay-1">
+              <p>
+                Компания не реализует свои собственные товары
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <div class="header">
         <div class="header__left">
@@ -303,5 +560,8 @@
         <button class="arrows__item" id="next"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
       </ul>
     </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANBr7lOkCDfxSCrfLBwXWKbDDhhxTZDTk&callback=initMap"
+    async defer></script>
   </body>
 </html>

@@ -1,4 +1,16 @@
 .slide {
+  &__center-title {
+    padding-top: 120px;
+    margin-bottom: 10px;
+    h2 {
+      color: $base-2;
+      font-size: 2em;
+      font-weight: bold;
+      line-height: 1.2em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
   &__wrap {
     width: 100%;
     height: 100%;
@@ -16,7 +28,7 @@
   &__title {
     color: $base-2;
     font-size: 2em;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 1.2em;
     text-align: right;
     text-transform: uppercase;
@@ -41,6 +53,43 @@
       box-sizing: border-box;
       width: 40.99%;
       margin-left: 4.99%;
+    }
+  }
+  &__text {
+    position: relative;
+    &:before{
+      position: absolute;
+      display: block;
+      content: '';
+      width: 110px;
+      height: 120px;
+      background-image: url(../img/logo-min.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      z-index: -1;
+      right: 0px;
+      top: -70px;
+    }
+    p {
+      text-align: right;
+      color: $base-3;
+      line-height: 1.5em;
+    }
+  }
+  &__author {
+    margin-top: 30px;
+    p {
+      text-align: right;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  &__author-post {
+    margin-top: 10px;
+    p {
+      text-align: right;
+      color: $base-3;
     }
   }
 }
