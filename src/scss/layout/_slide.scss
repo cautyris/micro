@@ -92,4 +92,10 @@
       color: $base-3;
     }
   }
+  &__small-title {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    color: $base-1;
+  }
 }

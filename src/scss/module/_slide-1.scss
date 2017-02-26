@@ -42,4 +42,42 @@
     margin-bottom: 10px;
     text-transform: uppercase;
   }
+  &__see-more {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 160px;
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 1px;
+      top: 25%;
+      left: -220px;
+      background: $base-4;
+    }
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 1px;
+      top: 25%;
+      right: -220px;
+      background: $base-4;
+    }
+    p {
+      color: $base-1;
+    }
+  }
+  &__next {
+    position: absolute;
+    bottom: 120px;
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      outline: none;
+    }
+  }
 }

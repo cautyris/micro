@@ -80,6 +80,7 @@ $.fn.scrollplugin = function(params) {
           $(slides[prevSlideIndex]).removeClass('closing');
           publish('CLOSED', slides[prevSlideIndex], slides[currentSlideIndex], prevSlideIndex, currentSlideIndex);
           currentSlideIndex++;
+          window.location.hash = $(slides[currentSlideIndex - 1])[0].id;
           $(slides[currentSlideIndex - 1]).fadeIn(fadeTime);
           $(slides[currentSlideIndex - 1]).addClass('active');
           publish(currentSlideIndex, slides[currentSlideIndex - 2], slides[currentSlideIndex - 1]);
@@ -105,6 +106,7 @@ $.fn.scrollplugin = function(params) {
           $(slides[prevSlideIndex]).removeClass('closing');
           publish('CLOSED', slides[prevSlideIndex], slides[prevSlideIndex - 1], prevSlideIndex, prevSlideIndex - 1);
           currentSlideIndex--;
+          window.location.hash = $(slides[currentSlideIndex - 1])[0].id;
           $(slides[currentSlideIndex - 1]).fadeIn(fadeTime);
           $(slides[currentSlideIndex - 1]).addClass('active');
           publish(currentSlideIndex, slides[currentSlideIndex], slides[currentSlideIndex - 1]);
@@ -117,6 +119,35 @@ $.fn.scrollplugin = function(params) {
     }
   }
 
+  function goToSlide(slideId) {
+    if (typeof slideId == 'string') {
+      slides.map(function(id, slide) {
+        if ($(slide)[0].id == slideId) {
+          window.location.hash = slideId;
+          slideId = ++id;
+        }
+      });
+    }
+    canMove = false;
+    var prevSlideIndex = currentSlideIndex - 1;
+    $(slides[prevSlideIndex]).fadeOut(fadeOutTime);
+    $(slides[prevSlideIndex]).removeClass('active');
+    $(slides[prevSlideIndex]).addClass('closing');
+    publish('CLOSING', slides[prevSlideIndex], slides[prevSlideIndex - 1]);
+
+    setTimeout(function() {
+      $(slides[prevSlideIndex]).removeClass('closing');
+      publish('CLOSED', slides[prevSlideIndex], slides[prevSlideIndex - 1], prevSlideIndex, prevSlideIndex - 1);
+      currentSlideIndex = slideId;
+      $(slides[currentSlideIndex - 1]).fadeIn(fadeTime);
+      $(slides[currentSlideIndex - 1]).addClass('active');
+      publish(currentSlideIndex, slides[currentSlideIndex], slides[currentSlideIndex - 1]);
+    }, fadeOutTime);
+    setTimeout(function() {
+      canMove = true;
+    }, scrollDelta);
+  }
+
   function subscrEnd(callback) {
     subscr(callback, 'END');
   }
@@ -124,9 +155,12 @@ $.fn.scrollplugin = function(params) {
   function subscrStart(callback) {
     subscr(callback, 'START');
   }
-
-  $(slides[0]).fadeIn();
-  $(slides[0]).addClass('active');
+  if (window.location.hash) {
+    goToSlide(window.location.hash.substr(1));
+  } else {
+    $(slides[0]).fadeIn();
+    $(slides[0]).addClass('active');
+  }
 
   console.log('Scrollplugin v.0.0.1');
   return {
@@ -134,5 +168,6 @@ $.fn.scrollplugin = function(params) {
     next: next,
     prev: prev,
     end: subscrEnd,
+    goToSlide: goToSlide,
   };
 }

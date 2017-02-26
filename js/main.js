@@ -24,17 +24,19 @@ $(document).ready(function() {
 
   slideShow.subscr(function(prev, cur, prevIndex, curIndex) {
     console.log(curIndex);
+    if (curIndex != 0) {
+      $('.header').addClass('top');
+      $('.footer').addClass('bottom');
+    }
     $(prev).find('.animated.fadeInLeft').removeClass('fadeOutLeft');
     $(prev).find('.animated.fadeInDown').removeClass('fadeOutUp');
     $(prev).find('.animated.fadeInUp').removeClass('fadeOutDown');
   }, 'CLOSED');
 
-  slideShow.subscr(function(prev, cur) {
-    console.log('2 second')
-  }, 2);
+
   slideShow.subscr(function(prev, cur) {
     google.maps.event.trigger(map, 'resize');
-  }, 12);
+  }, 16);//подпись пока только по номеру слайда.!!!
 
   slideShow.end(function() {
     console.log('ITS END!!')
@@ -42,7 +44,10 @@ $(document).ready(function() {
 
   $('#prev').click(slideShow.prev);
   $('#next').click(slideShow.next);
-
+  $('#js__slide-1-button').click(slideShow.next);
+  $('#contacts-link').click(function() {
+    slideShow.goToSlide('contacts');////указываем id слайда..
+  });
 
 ///touch events
   $('#page').hammer().on('swipedown', function(event) {
