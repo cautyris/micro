@@ -21,7 +21,7 @@
   &__base-img {
     width: 100%;
     img {
-      max-height: 310px;
+      max-height: 370px;
       max-width: 100%;
     }
   }
@@ -49,11 +49,6 @@
   &__row {
     margin-top: 40px;
     text-align: right;
-    .input {
-      box-sizing: border-box;
-      width: 40.99%;
-      margin-left: 4.99%;
-    }
   }
   &__text {
     position: relative;

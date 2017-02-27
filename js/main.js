@@ -76,11 +76,32 @@ $(document).ready(function() {
     classes: {
       "ui-slider": "slider",
       "ui-slider-handle": "slider__handle",
-      min: 0,
-      max: 2000
-    }
+    },
+    min: 0,
+    max: 100000,
+    step: 1000,
+    change: calcPrice,
   });
 
+  $('#js__calculator').change(calcPrice);
+
+  function calcPrice() {
+    var peopleCount = $('input[name="people-count"]:checked')[0].value;
+    var microscop = $('input[name="microscop"]:checked')[0].value;
+    var price = $('#slider').slider('value');
+    $('input[name="price"]')[0].value = price;
+    var baseProfit = peopleCount * 21 * price; ///21 рабочий день
+    var profitWithMicro = baseProfit * 1.5; //Прибыль возрастает в полтора раза
+    var clearProfit = profitWithMicro - baseProfit;
+    var payback = microscop / clearProfit;
+    $('#js__payback').text(Math.floor(payback));
+    $('#js__profit').text(Math.floor(clearProfit));
+
+    $('.slider__handle').html('<span class="slider__price">'+price+'</price>');
+    console.log(peopleCount);
+    console.log(microscop);
+    console.log(price);
+  }
 
 
 });

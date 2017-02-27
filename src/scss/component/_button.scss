@@ -58,7 +58,11 @@
   }
   &-half {
     box-sizing: border-box;
-    width: 40.99%;
-    margin-left: 4.99%;
+    width: 47%;
+    margin-left: 5%;
+  }
+  &-full {
+    box-sizing: border-box;
+    width: 100%;
   }
 }

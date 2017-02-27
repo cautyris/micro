@@ -106,8 +106,8 @@
               </p>
             </div>
             <div class="slide__row animated fadeInUp delay-1">
-              <input type="text" placeholder="Ваше имя" class="input">
-              <input type="text" placeholder="Ваш телефон" class="input">
+              <input type="text" placeholder="Ваше имя" class="input input-half">
+              <input type="text" placeholder="Ваш телефон" class="input input-half">
             </div>
             <div class="slide__row animated fadeInUp delay-2">
               <button class="button"><span>Получить предложение</span><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
@@ -221,8 +221,8 @@
               </p>
             </div>
             <div class="slide__row animated fadeInUp delay-1">
-              <input type="text" placeholder="Ваше имя" class="input">
-              <input type="text" placeholder="Ваш телефон" class="input">
+              <input type="text" placeholder="Ваше имя" class="input input-half">
+              <input type="text" placeholder="Ваш телефон" class="input input-half">
             </div>
             <div class="slide__row animated fadeInUp delay-2">
               <button class="button"><span>Получить предложение</span><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
@@ -313,66 +313,78 @@
               <img class="animated fadeInLeft" src="img/img11-min.png" alt="" />
             </div>
           </div>
-          <div class="col-half">
-            <h2 class="slide__title animated fadeInUp">Калькулятор окупаемости<br>микроскопа</h2>
-            <div class="slide__info animated fadeInUp">
-              <p>
-                Чем лучше вы видите проблему - тем успешнее ее решаете Увеличен
-              </p>
-            </div>
-            <div class="slide__row contain animated fadeInUp delay-1">
-              <div class="col-6">
-                <ul class="list">
-                  <li class="list__title">
-                    <p>Выберите тип микроскопа:</p>
-                  </li>
-                  <li class="list__item">
-                    <input class="radio" type="radio" name="radio-1" id="radio-1">
-                    <label class="radio__label" for="radio-1">Paris</label>
-                  </li>
-                  <li class="list__item">
-                    <input class="radio" type="radio" name="radio-1" id="radio-2">
-                    <label class="radio__label" for="radio-2">London</label>
-                  </li>
-                </ul>
+          <div class="col-half calculator">
+            <form id="js__calculator" action="/">
+              <h2 class="slide__title animated fadeInUp">Калькулятор окупаемости<br>микроскопа</h2>
+              <div class="slide__info animated fadeInUp">
+                <p>
+                  Чем лучше вы видите проблему - тем успешнее ее решаете Увеличен
+                </p>
               </div>
-              <div class="col-6">
-                <ul class="list">
-                  <li class="list__title">
-                    <p>Среднее количество пациентов в день:</p>
-                  </li>
-                  <li class="list__item">
-                    <input class="radio" type="radio" name="radio-2" id="radio-2-1">
-                    <label class="radio__label" for="radio-2-1">10</label>
-                  </li>
-                  <li class="list__item">
-                    <input class="radio" type="radio" name="radio-2" id="radio-2-2">
-                    <label class="radio__label" for="radio-2-2">100</label>
-                  </li>
-                  <li class="list__item">
-                    <input class="radio" type="radio" name="radio-2" id="radio-2-3">
-                    <label class="radio__label" for="radio-2-3">200</label>
-                  </li>
-                  <li class="list__item">
-                    <input class="radio" type="radio" name="radio-2" id="radio-2-4">
-                    <label class="radio__label" for="radio-2-4">500</label>
-                  </li>
-                  <li class="list__item">
-                    <input class="radio" type="radio" name="radio-2" id="radio-2-5">
-                    <label class="radio__label" for="radio-2-5">1000</label>
-                  </li>
-                </ul>
+              <div class="slide__row contain animated fadeInUp delay-1">
+                <div class="col-6">
+                  <ul class="list">
+                    <li class="list__title">
+                      <p>Выберите тип микроскопа:</p>
+                    </li>
+                    <li class="list__item">
+                      <input class="radio" type="radio" name="microscop" value="1200000" id="radio-1" checked="true">
+                      <label class="radio__label" for="radio-1"><b>Микроскоп 1</b></label>
+                    </li>
+                    <li class="list__item">
+                      <input class="radio" type="radio" name="microscop" value="2000000" id="radio-2">
+                      <label class="radio__label" for="radio-2"><b>Микроскоп 2</b></label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="list">
+                    <li class="list__title">
+                      <p>Среднее количество пациентов в день:</p>
+                    </li>
+                    <li class="list__item">
+                      <input class="radio" type="radio" name="people-count" value="1.5" id="radio-2-1" checked="true">
+                      <label class="radio__label" for="radio-2-1"><b>1-2 человека</b></label>
+                    </li>
+                    <li class="list__item">
+                      <input class="radio" type="radio" name="people-count" value="3.5" id="radio-2-2">
+                      <label class="radio__label" for="radio-2-2"><b>3-4 человека</b></label>
+                    </li>
+                    <li class="list__item">
+                      <input class="radio" type="radio" name="people-count" value="4.5" id="radio-2-3">
+                      <label class="radio__label" for="radio-2-3"><b>4-5 человек</b></label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="slide__row calculator__slider-row animated fadeInUp delay-2">
+                <div class="calculator__slider-descr">
+                  Ваш средний чек (рублей):
+                </div>
+                <div class="calculator__slider">
+                  <div class="slider__min">0</div>
+                  <div class="slider__max">100,000</div>
+                  <div id="slider"></div>
+                  <input type="hidden" name="price" value="0">
+                </div>
+              </div>
+              <div class="slide__row contain animated fadeInUp delay-2">
+                <div class="col-6 calculator__payback">
+                  <p>Периуд окупаемости: <b><span id="js__payback">0</span> месяцев</b></p>
+                </div>
+                <div class="col-6 calculator__profit">
+                  <p>Потом прибыль: <b><span id="js__profit">0</span> руб/мес</b></p>
+                </div>
+              </div>
+              <div class="slide__row contain animated fadeInUp delay-2">
+                <input class="input input-half" type="text" name="name" value="" placeholder="Ваше имя">
+                <input class="input input-half" type="email" name="email" value="" placeholder="Ваш электронный адрес">
+              </div>
+              <div class="slide__row animated fadeInUp delay-2">
+                <button class="button button-full" type="submit"><span>Запросить коммерческое предложение с точными ценами</span><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
               </div>
             </div>
-            <div class="slide__row animated fadeInUp delay-2">
-              <div class="slider__min">0</div>
-              <div class="slider__max">1000</div>
-              <div id="slider"></div>
-            </div>
-            <div class="slide__row animated fadeInUp delay-2">
-              <button class="button"><span>Получить предложение</span><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-            </div>
-          </div>
+          </form>
         </div>
       </section>
 
@@ -391,11 +403,11 @@
               </p>
             </div>
             <div class="slide__row animated fadeInUp delay-1">
-              <input type="text" placeholder="Ваше имя" class="input">
-              <input type="text" placeholder="Ваш телефон" class="input">
+              <input type="text" placeholder="Ваше имя" class="input input-half">
+              <input type="text" placeholder="Ваш телефон" class="input input-half">
             </div>
             <div class="slide__row animated fadeInUp delay-2">
-              <input type="text" placeholder="Електронная почта" class="input">
+              <input type="text" placeholder="Електронная почта" class="input input-half">
               <button class="button button-half"><span>Получить предложение</span><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             </div>
           </div>

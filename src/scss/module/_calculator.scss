@@ -1,0 +1,33 @@
+.calculator {
+  &__slider-row {
+
+  }
+  &__slider-descr {
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;
+    text-align: left;
+    color: $base-3;
+    font-weight: bold;
+  }
+  &__slider {
+    vertical-align: middle;
+    display: inline-block;
+    width: 59%;
+    position: relative;
+  }
+  &__payback {
+    p {
+      text-transform: uppercase;
+      text-align: left;
+      color: $base-3;
+    }
+  }
+  &__profit {
+    p {
+      text-transform: uppercase;
+      text-align: right;
+      color: $base-3;
+    }
+  }
+}

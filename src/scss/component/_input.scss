@@ -4,4 +4,12 @@
   padding: 10px;
   outline: none;
   border-bottom: 1px solid $base-3;
+  box-sizing: border-box;
+  &.input-half {
+    width: 47%;
+    margin-left: 5%;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
