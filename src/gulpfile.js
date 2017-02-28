@@ -6,10 +6,10 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('styles', function() {
     gulp.src('./scss/main.scss')
-    .pipe(sourcemap.init())
+    // .pipe(sourcemap.init())
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer())
-    .pipe(sourcemap.write())
+    // .pipe(sourcemap.write())
     .pipe(gulp.dest("../css"))
     .pipe(browserSync.reload({stream: true}));
 });
@@ -31,10 +31,10 @@ gulp.task('serve', function() {
     }
   });
   gulp.src('./scss/main.scss')
-  .pipe(sourcemap.init())
+  // .pipe(sourcemap.init())
   .pipe(sass({outputStyle: 'compressed'}))
   .pipe(autoprefixer())
-  .pipe(sourcemap.write())
+  // .pipe(sourcemap.write())
   .pipe(gulp.dest("../css"))
 
   gulp.watch('./scss/**/*.scss', ['styles']);

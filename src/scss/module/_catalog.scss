@@ -52,4 +52,9 @@
       width: 100%;
     }
   }
+  @include pad {
+    .col-3 {
+      width: 49.99%;
+    }
+  };
 }

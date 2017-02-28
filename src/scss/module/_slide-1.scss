@@ -1,6 +1,9 @@
 .slide-1 {
   padding: 40px;
   box-sizing: border-box;
+  @include pad {
+    padding: 10px;
+  };
   &__back {
     box-sizing: border-box;
     display: block;
@@ -16,6 +19,9 @@
     background-position: right;
     background-position-y: 113px;
     background-size: 455px;
+    @include pad {
+      background-position-y: 900px;
+    };
   }
   &__wrap {
     display: flex;
@@ -46,26 +52,31 @@
     position: absolute;
     box-sizing: border-box;
     bottom: 160px;
-    &:before {
-      display: block;
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 1px;
-      top: 25%;
-      left: -220px;
-      background: $base-4;
-    }
-    &:after {
-      display: block;
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 1px;
-      top: 25%;
-      right: -220px;
-      background: $base-4;
-    }
+    @include pad {
+      bottom: 135px;
+    };
+    @include desktop {
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 1px;
+        top: 25%;
+        left: -220px;
+        background: $base-4;
+      }
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 1px;
+        top: 25%;
+        right: -220px;
+        background: $base-4;
+      }
+    };
     p {
       color: $base-1;
     }
@@ -73,6 +84,9 @@
   &__next {
     position: absolute;
     bottom: 120px;
+    @include pad {
+      bottom: 80px;
+    };
     button {
       border: none;
       background: none;

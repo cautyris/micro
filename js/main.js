@@ -50,13 +50,16 @@ $(document).ready(function() {
   });
 
 ///touch events
-  $('#page').hammer().on('swipedown', function(event) {
-    console.log('next');
-    slideShow.next();
-  });
-  $('#page').hammer().on('swipeup', function(event) {
+var hammertime = new Hammer(document.body);
+hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+  $(document).hammer().on('swipedown', function(event) {
     console.log('prev');
     slideShow.prev();
+  });
+  $(document).hammer().on('swipeup', function(event) {
+    console.log('next');
+    slideShow.next();
   });
 
 

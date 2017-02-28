@@ -36,11 +36,17 @@
   &__liyer {
     display: none;
     position: absolute;
+    @include pad {
+      width: 100%;
+    };
   }
   &__container {
     position: relative;
     padding-top: 80px;
     height: 100%;
     width: 100%;
+    @include pad {
+      min-height: 500px;
+    };
   }
 }

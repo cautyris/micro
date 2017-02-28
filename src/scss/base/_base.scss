@@ -19,6 +19,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	font-family: 'Fira Sans', sans-serif;
 	color: $base-1;
+	font-size: 11pt;
+	@include pad {
+		font-size: 15pt;
+	};
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -47,9 +51,12 @@ i {
 	vertical-align: middle;
 }
 html {
-	font-size: 11pt;
+
 }
 #map {
 	width: 400px;
 	height: 400px;
+	@include pad {
+		margin: 0 auto;
+	};
 }

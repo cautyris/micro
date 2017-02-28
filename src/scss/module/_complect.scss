@@ -33,4 +33,9 @@
       text-align: center;
     }
   }
+  @include pad {
+    .col-4 {
+      width: 100%;
+    }
+  };
 }

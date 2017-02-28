@@ -19,4 +19,7 @@
     color: $base-4;
     width: 17px;
   }
+  @include pad {
+    display: none;
+  };
 }
