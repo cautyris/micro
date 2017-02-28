@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
   @include pad {
     width: 100%;
     display: block;
