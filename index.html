@@ -8,6 +8,7 @@
     <script src="js/jquery-ui.js" charset="utf-8"></script>
     <script src="js/hammer.min.js" charset="utf-8"></script>
     <script src="js/jquery.hammer.js" charset="utf-8"></script>
+    <script src="js/jquery.parallax.js" charset="utf-8"></script>
     <script src="js/scrollplugin.js" charset="utf-8"></script>
     <script src="js/main.js" charset="utf-8"></script>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
@@ -307,11 +308,14 @@
           </div>
         </div>
       </section>
-      <section class="sp-slide slide wrap" id="slide-11">
+      <section class="sp-slide slide wrap" id="calculator">
         <div class="slide__wrap">
           <div class="col-half col-center">
             <div class="slide__base-img">
-              <img class="animated fadeInLeft" src="img/img11-min.png" alt="" />
+              <ul id="scene" class="scene">
+                <li class="layer" data-depth="0.00"><img src="img/img11-min.png"></li>
+                <li class="layer" data-depth="0.50"><img src="img/img11_2-min.png"></li>
+              </ul>
             </div>
           </div>
           <div class="col-half calculator">

@@ -105,9 +105,12 @@ hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
     console.log(microscop);
     console.log(price);
   }
+  /////parallax
+  $('#scene').parallax();
 
 
 });
+
 
 /////map
 function initMap() {
