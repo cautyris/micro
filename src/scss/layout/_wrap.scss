@@ -1,6 +1,7 @@
 .wrap {
   padding: 40px 130px;
   box-sizing: border-box;
+  overflow: hidden;
   @include pad {
     padding: 150px 40px 35px 40px;
   }
