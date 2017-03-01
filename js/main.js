@@ -100,6 +100,9 @@ hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
     $('#js__payback').text(Math.floor(payback));
     $('#js__profit').text(Math.floor(clearProfit));
 
+    $('#js__payback-input').val(Math.floor(payback));
+    $('#js__profit-input').val(Math.floor(clearProfit));
+
     $('.slider__handle').html('<span class="slider__price">'+price+'</price>');
     console.log(peopleCount);
     console.log(microscop);
