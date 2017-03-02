@@ -91,6 +91,8 @@ hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
   function calcPrice() {
     var peopleCount = $('input[name="people-count"]:checked')[0].value;
     var microscop = $('input[name="microscop"]:checked')[0].value;
+    var microscopName = $('input[name="microscop"]:checked + label').text();
+    $('#js__microscop-name').val(microscopName);
     var price = $('#slider').slider('value');
     $('input[name="price"]')[0].value = price;
     var baseProfit = peopleCount * 21 * price; ///21 рабочий день
