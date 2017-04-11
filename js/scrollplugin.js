@@ -5,23 +5,14 @@ $.fn.scrollplugin = function(params) {
   var currentSlideIndex = 1;
   var canMove = true;
 
-  var scrollDelta = 800;
-  if (params.scrollDelta) {
-    scrollDelta = params.scrollDelta;
-  }
-  var fadeTime = 100;
-  if (params.fadeTime) {
-    fadeTime = params.fadeTime;
-  }
-  var fadeOutTime = 100;
-  if (params.fadeOutTime) {
-    fadeOutTime = params.fadeOutTime;
-  }
+  var scrollDelta = (params.scrollDelta == undefined)? 800 : params.scrollDelta;
+  var fadeTime    = (params.fadeTime == undefined)? 100 : params.fadeTime;
+  var fadeOutTime = (params.fadeOutTime == undefined)? 100 : params.fadeOutTime;
 
 ///scroll
   if (document.addEventListener) {
       document.addEventListener("mousewheel", MouseWheelHandler(), false);
-      document.addEventListener("DOMMouseScroll", MouseWheelHandler(), false);
+      // document.addEventListener("DOMMouseScroll", MouseWheelHandler(), false);
   } else {
       sq.attachEvent("onmousewheel", MouseWheelHandler());
   }
@@ -162,8 +153,13 @@ $.fn.scrollplugin = function(params) {
     $(slides[0]).addClass('active');
   }
 
-  console.log('Scrollplugin v.0.0.1');
+  function setMovement(state) {
+    canMove = state;
+  }
+
+  console.log('Scrollplugin v.0.1.3');
   return {
+    setMovement: setMovement,
     subscr: subscr,
     next: next,
     prev: prev,

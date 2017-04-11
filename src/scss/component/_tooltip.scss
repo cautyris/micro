@@ -1,0 +1,10 @@
+.ui-tooltip {
+	background-color: $base-2;
+	box-shadow: none;
+	border-radius: 0;
+	border: none;
+	padding: 15px;
+	.ui-tooltip-content {
+		color: $base-5;
+	}
+}

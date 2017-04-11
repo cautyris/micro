@@ -3,7 +3,7 @@ $(document).ready(function() {
     slide: 'section',
     fadeTime: 700,
     fadeOutTime: 400,
-    scrollDelta: 900
+    scrollDelta: 1000
   });
 
   slideShow.subscr(function(prev, cur) {
@@ -31,8 +31,19 @@ $(document).ready(function() {
     $(prev).find('.animated.fadeInLeft').removeClass('fadeOutLeft');
     $(prev).find('.animated.fadeInDown').removeClass('fadeOutUp');
     $(prev).find('.animated.fadeInUp').removeClass('fadeOutDown');
+    $('.tooltiper').tooltip({
+      position: { my: "right center", at: "left center", of: '#awesomeId' }
+    });
   }, 'CLOSED');
 
+  ///Лочим или нет, скролл когда открывается модаалка
+  $('.modal').on('show.bs.modal', function (e) {
+    slideShow.setMovement(false);
+  });
+
+  $('.modal').on('hide.bs.modal', function (e) {
+    slideShow.setMovement(true);
+  });
 
   slideShow.subscr(function(prev, cur) {
     google.maps.event.trigger(map, 'resize');
@@ -111,7 +122,7 @@ hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
   /////parallax
   $('#scene').parallax();
 
-
+  $('.modal__content').perfectScrollbar();
 });
 
 

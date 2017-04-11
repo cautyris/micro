@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=1023">
     <title>Micro</title>
     <script src="js/jquery-1.9.1.js" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
     <script src="js/jquery-ui.js" charset="utf-8"></script>
     <script src="js/hammer.min.js" charset="utf-8"></script>
     <script src="js/jquery.hammer.js" charset="utf-8"></script>
     <script src="js/jquery.parallax.js" charset="utf-8"></script>
+    <script src="js/perfect-scrollbar.jquery.min.js" charset="utf-8"></script>
     <script src="js/scrollplugin.js" charset="utf-8"></script>
     <script src="js/main.js" charset="utf-8"></script>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/scrollplugin.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
   </head>
@@ -123,7 +127,7 @@
             <h2>Каталог микроскопов</h2>
           </div>
           <div class="catalog contain">
-            <div class="col-3 catalog__item animated fadeInUp">
+            <div class="col-2-5 catalog__item animated fadeInUp">
               <div class="catalog__item_title">
                 <div class="catalog__item_img">
                   <img src="img/img6_1-min.png" alt="">
@@ -132,14 +136,14 @@
                   <h3>Название микроскопа</h3>
                 </div>
               </div>
-              <div class="catalog__item_descr">
+     <!--          <div class="catalog__item_descr">
                 <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
-              </div>
+              </div> -->
               <div>
-                <button type="button" class="button" name="button">Запросить цену<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button type="button" class="button button-link" name="button" data-toggle="modal" data-target="#catalogModal">Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
               </div>
             </div>
-            <div class="col-3 catalog__item animated fadeInUp delay-1">
+            <div class="col-2-5 catalog__item animated fadeInUp delay-1">
               <div class="catalog__item_title">
                 <div class="catalog__item_img">
                   <img src="img/img6_2-min.png" alt="">
@@ -148,14 +152,14 @@
                   <h3>Название микроскопа</h3>
                 </div>
               </div>
-              <div class="catalog__item_descr">
+<!--               <div class="catalog__item_descr">
                 <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
-              </div>
+              </div> -->
               <div>
-                <button type="button" class="button" name="button">Запросить цену<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button type="button" class="button button-link" name="button" data-toggle="modal" data-target="#catalogModal">Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
               </div>
             </div>
-            <div class="col-3 catalog__item animated fadeInUp delay-2">
+            <div class="col-2-5 catalog__item animated fadeInUp delay-2">
               <div class="catalog__item_title">
                 <div class="catalog__item_img">
                   <img src="img/img6_3-min.png" alt="">
@@ -164,14 +168,14 @@
                   <h3>Название микроскопа</h3>
                 </div>
               </div>
-              <div class="catalog__item_descr">
+          <!--     <div class="catalog__item_descr">
                 <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
-              </div>
+              </div> -->
               <div>
-                <button type="button" class="button" name="button">Запросить цену<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button type="button" class="button button-link" name="button" data-toggle="modal" data-target="#catalogModal">Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
               </div>
             </div>
-            <div class="col-3 catalog__item animated fadeInUp delay-3">
+            <div class="col-2-5 catalog__item animated fadeInUp delay-3">
               <div class="catalog__item_title">
                 <div class="catalog__item_img">
                   <img src="img/img6_4-min.png" alt="">
@@ -180,11 +184,61 @@
                   <h3>Название микроскопа</h3>
                 </div>
               </div>
-              <div class="catalog__item_descr">
+              <!-- <div class="catalog__item_descr">
                 <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
-              </div>
+              </div> -->
               <div>
-                <button type="button" class="button" name="button">Запросить цену<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button type="button" class="button button-link" name="button" data-toggle="modal" data-target="#catalogModal">Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div class="col-2-5 catalog__item animated fadeInUp delay-3">
+              <div class="catalog__item_title">
+                <div class="catalog__item_img">
+                  <img src="img/img6_4-min.png" alt="">
+                </div>
+                <div class="catalog__item_name">
+                  <h3>Название микроскопа</h3>
+                </div>
+              </div>
+              <!-- <div class="catalog__item_descr">
+                <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+              </div> -->
+              <div>
+                <button type="button" class="button button-link" name="button" data-toggle="modal" data-target="#catalogModal">Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div class="modal fade" id="catalogModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal__block">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <img src="img/cross.svg" alt="">
+            </button>
+                <div class="modal__img">
+                  <img src="img/img6_4-min.png" alt="">
+                </div>
+                <div class="modal__content">
+                  <div class="modal__text">
+                    <h3>Название микроскопа<br>длинное</h3>
+                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Sed porttitor lectus nibh. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+
+                    <ul>
+                      <li>Nulla quis lorem ut libero malesuada</li>
+                      <li>Curabitur arcu erat</li>
+                      <li>Mauris blandit aliquet elit, eget tincidunt nibh</li>
+                      <li>Donec velit neque, auctor sit amet aliquam vel, ullamcorper</li>
+                      <li>Quisque velit nisi, pretium ut lacinia in</li>
+                    </ul>
+
+                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada.</p>
+
+                    <p>lectus. Pellentesque in ipsum id orci porta dapibus.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+
+                    <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.</p>
+
+                    <p>Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -497,9 +551,9 @@
             <h2>Что входит в комплект</h2>
           </div>
           <div class="complect contain">
-            <div class="col-4 complect__item animated fadeInUp ">
+            <div class="col-4 complect__item animated fadeInUp"  id="awesomeId">
               <div class="complect__img"><img src="img/img15-min.png" alt=""></div>
-              <div class="complect__name">
+              <div class="complect__name tooltiper" data-toggle="tooltip" data-placement="left" title="Tooltip on left<br>тест ещеё текст много текста<br> asdas sad a sd">
                 <p>Название элемента</p>
               </div>
             </div>
