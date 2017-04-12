@@ -31,8 +31,25 @@ $(document).ready(function() {
     $(prev).find('.animated.fadeInLeft').removeClass('fadeOutLeft');
     $(prev).find('.animated.fadeInDown').removeClass('fadeOutUp');
     $(prev).find('.animated.fadeInUp').removeClass('fadeOutDown');
-    $('.tooltiper').tooltip({
-      position: { my: "right center", at: "left center", of: '#awesomeId' }
+    $("[data-toggle='tooltip']").tooltip({
+      position: { my: "right center", at: "left center", collision: "flip flip" },
+      open: function( event, ui ) {
+        var target = $(event.target);
+        var tooltip = $(ui.tooltip);
+        if (target.data('html-text')) {
+          tooltip.find('.ui-tooltip-content').html(target.data('html-text'));
+        }
+        var different = target.position().left - tooltip.position().left;
+        if (different > 0) {
+          tooltip.addClass('rightArrow');
+          tooltip.addClass('rightOpening');
+        } else {
+          tooltip.addClass('leftArrow');
+          tooltip.addClass('leftOpening');
+        }
+      },
+      close: function( event, ui ) {
+      }
     });
   }, 'CLOSED');
 

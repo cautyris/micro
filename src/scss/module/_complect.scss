@@ -26,11 +26,19 @@
   }
   &__name {
     margin-top: 15px;
+    text-align: center;
     p {
+      display: inline-block;
+      width: 70%;
       font-size: 1.1em;
       color: $base-3;
       text-transform: uppercase;
       text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      &:hover {
+        color: $base-2;
+      }
     }
   }
   @include pad {

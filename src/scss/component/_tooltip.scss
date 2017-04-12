@@ -6,5 +6,69 @@
 	padding: 15px;
 	.ui-tooltip-content {
 		color: $base-5;
+		line-height: 1.5em;
+		b {
+			color: #fff;
+		}
+		p {
+			margin-top: 10px;
+			color: $base-5;
+		}
+	}
+	&.leftArrow, &.rightArrow {
+		&:before {
+			display: block;
+			content: '';
+			background-color: $base-2;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: calc(50% - 12px);
+			transform: rotate(45deg);
+		}
+	}
+	&.leftArrow {
+		&:before {
+			left: -10px;
+		}
+		animation-name: openLeftAnim;
+		animation-duration: .4s;
+	}
+	&.rightArrow {
+		&:before {
+			right: -10px;
+		}
+		animation-name: openRightAnim;
+		animation-duration: .4s;
+	}
+}
+
+@keyframes openLeftAnim {
+	0% {
+		transform: scale(.1) translateX(-180px);
+	}
+	80% {
+		transform: scale(1) translateX(0px);
+	}
+	90% {
+		transform: scale(.98) translateX(0px);
+	}
+	100% {
+		transform: scale(1) translateX(0px);
+	}
+}
+
+@keyframes openRightAnim {
+	0% {
+		transform: scale(.1) translateX(180px);
+	}
+	80% {
+		transform: scale(1) translateX(0px);
+	}
+	90% {
+		transform: scale(.98) translateX(0px);
+	}
+	100% {
+		transform: scale(1) translateX(0px);
 	}
 }
