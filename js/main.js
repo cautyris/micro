@@ -3,7 +3,7 @@ $(document).ready(function() {
     slide: 'section',
     fadeTime: 700,
     fadeOutTime: 400,
-    scrollDelta: 1000
+    scrollDelta: 1500
   });
 
   slideShow.subscr(function(prev, cur) {
@@ -20,6 +20,7 @@ $(document).ready(function() {
     $(prev).find('.animated.fadeInLeft').addClass('fadeOutLeft');
     $(prev).find('.animated.fadeInDown').addClass('fadeOutUp');
     $(prev).find('.animated.fadeInUp').addClass('fadeOutDown');
+    google.maps.event.trigger(map, 'resize');
   }, 'CLOSING');
 
   slideShow.subscr(function(prev, cur, prevIndex, curIndex) {
@@ -51,6 +52,7 @@ $(document).ready(function() {
       close: function( event, ui ) {
       }
     });
+    google.maps.event.trigger(map, 'resize');
   }, 'CLOSED');
 
   ///Лочим или нет, скролл когда открывается модаалка
@@ -143,22 +145,3 @@ hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
   $('.modal__content').perfectScrollbar();
 });
-
-
-/////map
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 55.73868745, lng: 37.6203391},
-    scrollwheel: false,
-    zoom: 17
-  });
-
-  var myLatLng = {lat: 55.73868745, lng: 37.6203391};///Отметка на карте
-
-  // Create a marker and set its position.
-  var marker = new google.maps.Marker({
-    map: map,
-    position: myLatLng,
-    title: 'Мы тут!'
-  });
-}
