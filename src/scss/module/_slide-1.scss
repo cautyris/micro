@@ -32,6 +32,17 @@
     align-items: center;
     position: relative;
   }
+  &__bottom {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 160px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    @include pad {
+      bottom: 135px;
+    };
+  }
   h1 {
     font-size: 3em;
     color: $base-2;
@@ -50,12 +61,8 @@
     text-transform: uppercase;
   }
   &__see-more {
-    position: absolute;
-    box-sizing: border-box;
-    bottom: 160px;
-    @include pad {
-      bottom: 135px;
-    };
+    position: relative;
+    display: inline-block;
     @include desktop {
       &:before {
         display: block;
@@ -83,11 +90,6 @@
     }
   }
   &__next {
-    position: absolute;
-    bottom: 120px;
-    @include pad {
-      bottom: 80px;
-    };
     button {
       border: none;
       background: none;
