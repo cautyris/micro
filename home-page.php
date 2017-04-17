@@ -344,7 +344,7 @@ get_header(); ?>
               <div class="slide__row contain animated fadeInUp delay-2">
                 <div class="col-6 calculator__payback">
                   <input id="js__payback-input" type="hidden" name="payback" value="0">
-                  <p>Периуд окупаемости: <b><span id="js__payback">0</span> месяцев</b></p>
+                  <p id="js__payback">Периуд окупаемости: <b>0</b></p>
                 </div>
                 <div class="col-6 calculator__profit">
                 <input id="js__profit-input" type="hidden" name="profit" value="0">

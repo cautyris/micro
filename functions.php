@@ -117,12 +117,13 @@ function zeiss_scripts() {
 
 	wp_enqueue_script( 'zeiss-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	
+
 	// MyJS
 	wp_enqueue_script( 'zeiss-jquery-1.9.1', get_template_directory_uri() . '/js/jquery-1.9.1.js', array(), '20151215', true );
 	wp_enqueue_script( 'zeiss-jquery-1.9.1', get_template_directory_uri() . '/js/jquery.maskedinput.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'zeiss-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'zeiss-jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array(), '20151215', true );
+	wp_enqueue_script( 'zeiss-jquery.ui.touch-punch.min', get_template_directory_uri() . '/js/jquery.ui.touch-punch.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'zeiss-hammer.min', get_template_directory_uri() . '/js/hammer.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'zeiss-jquery.hammer', get_template_directory_uri() . '/js/jquery.hammer.js', array(), '20151215', true );
 	wp_enqueue_script( 'zeiss-jquery.parallax', get_template_directory_uri() . '/js/jquery.parallax.js', array(), '20151215', true );

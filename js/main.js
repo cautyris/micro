@@ -128,12 +128,19 @@ hammertime.get('pinch').set({ enable: true });
     var profitWithMicro = baseProfit * 1.5; //Прибыль возрастает в полтора раза
     var clearProfit = profitWithMicro - baseProfit;
     var payback = microscop / clearProfit;
-    $('#js__payback').text(Math.floor(payback));
+    if (payback <= 1) {
+      $('#js__payback').html('<b>Окупаемость в первый месяц</b>');
+    } else {
+      if (payback > 999) {
+        $('#js__payback').html('Периуд окупаемости неизвестен');
+      } else {
+        $('#js__payback').html('Периуд окупаемости: <b>' + Math.floor(payback) + ' месяцев</b>');
+      }
+    }
     $('#js__profit').text(Math.floor(clearProfit));
 
     $('#js__payback-input').val(Math.floor(payback));
     $('#js__profit-input').val(Math.floor(clearProfit));
-
     $('.slider__handle').html('<span class="slider__price">'+price+'</price>');
   }
   /////parallax
