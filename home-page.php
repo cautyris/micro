@@ -13,12 +13,14 @@ get_header(); ?>
               <h2>С новыми микроскопами "Carl ZEISS"</h2>
                 <p>Лучшая цена на рынке</p>
                 <p>от 10,900</p>
-                <div class="slide-1__see-more">
-                  <p>Увидеть 10 раз больше</p>
-                </div>
-                <div class="slide-1__next" id="js__slide-1-button">
-                  <button type="button" name="button"> <img src="<?bloginfo('template_url');?>/img/three_line-min.png" alt="" /></button>
-                </div>
+            </div>
+            <div class="slide-1__bottom">
+              <div class="slide-1__see-more">
+                <p>Увидеть 10 раз больше</p>
+              </div>
+              <div class="slide-1__next" id="js__slide-1-button">
+                <button type="button" name="button"> <img src="<?bloginfo('template_url');?>/img/three_line-min.png" alt="" /></button>
+              </div>
             </div>
           </div>
         </div>
@@ -31,7 +33,7 @@ get_header(); ?>
             </div>
           </div>
           <div class="col-half">
-            
+
             <h2 class="slide__title animated fadeInUp">Позабодьтесь<br> о своем здоровье</h2>
             <div class="slide__info animated fadeInUp delay-1">
               <p>
@@ -40,7 +42,7 @@ get_header(); ?>
             </div>
           </div>
         </div>
-        
+
       </section>
       <section class="sp-slide slide wrap" id="slide-3">
         <div class="slide__wrap">
@@ -50,7 +52,7 @@ get_header(); ?>
             </div>
           </div>
           <div class="col-half">
-            
+
             <h2 class="slide__title animated fadeInUp">Доверие пациентов</h2>
             <div class="slide__info animated fadeInUp delay-1">
               <p>
@@ -59,7 +61,7 @@ get_header(); ?>
             </div>
           </div>
         </div>
-        
+
       </section>
       <section class="sp-slide slide wrap" id="slide-4">
         <div class="slide__wrap">
@@ -69,7 +71,7 @@ get_header(); ?>
             </div>
           </div>
           <div class="col-half">
-            
+
             <h2 class="slide__title animated fadeInUp">Высокая компетентность</h2>
             <div class="slide__info animated fadeInUp delay-1">
               <p>
@@ -78,10 +80,9 @@ get_header(); ?>
             </div>
           </div>
         </div>
-        
+
       </section>
       <section class="sp-slide slide wrap" id="slide-5">
-      <?echo do_shortcode('[Wow-Modal-Windows id=1]');?>
         <div class="slide__wrap">
           <div class="col-half col-center">
             <div class="slide__base-img">
@@ -106,7 +107,7 @@ get_header(); ?>
           <!-- Flex -->
 
           <?if( get_field('catalog') ): $i=0; while ( has_sub_field('catalog') ) : $i++;?>
-            <div class="col-2-5 catalog__item animated fadeInUp">
+            <div class="col-2-5 catalog__item animated fadeInUp" data-toggle="modal" data-target="#catalogModal-<?php echo $i; ?>">
               <div class="catalog__item_title">
                 <div class="catalog__item_img">
                 <?if( get_row_layout() == 'product_catalog' ):?>
@@ -127,7 +128,7 @@ get_header(); ?>
               <div>
               <?//if( get_row_layout() == 'product_catalog' ):?>
                 <!-- <a href="<?//the_sub_field('id_modal_window');?>"><button type="button" class="button" name="button">Запросить цену<i class="fa fa-arrow-right" aria-hidden="true"></i></button></a> -->
-                <button type="button" class="button button-link" name="button" data-toggle="modal" data-target="#catalogModal-<?php echo $i; ?>">Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button type="button" class="button button-link" name="button">Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 <?//endif;?>
               </div>
             </div>
@@ -148,7 +149,7 @@ get_header(); ?>
               </div>
             </div>
           <? endwhile; else : endif;?>
-          <!-- End -->        
+          <!-- End -->
           </div>
         </div>
       </section>
@@ -160,7 +161,7 @@ get_header(); ?>
             </div>
           </div>
           <div class="col-half">
-            
+
             <h2 class="slide__title animated fadeInUp">Возможность подключения<br> фото и видео камеры</h2>
             <div class="slide__info animated fadeInUp">
               <p>
@@ -201,7 +202,7 @@ get_header(); ?>
                     <img src="<?bloginfo('template_url');?>/img/img9_1-min.png" alt="" />
                   </div>
                   <div class="benefit__descr">
-                    <span>Описание преимущества.</span>
+                    <span>Монтаж вашего микроскопа проведет<br>сертифицированный специалист «Zeiss»</span>
                   </div>
                 </a>
               </div>
@@ -213,7 +214,7 @@ get_header(); ?>
                     <img src="<?bloginfo('template_url');?>/img/img9_2-min.png" alt="" />
                   </div>
                   <div class="benefit__descr">
-                    <span>Описание преимущества.</span>
+                    <span>Доставка и профессиональный<br>монтаж бесплатно</span>
                   </div>
                 </a>
               </div>
@@ -225,7 +226,7 @@ get_header(); ?>
                     <img src="<?bloginfo('template_url');?>/img/img9_3-min.png" alt="" />
                   </div>
                   <div class="benefit__descr">
-                    <span>Описание преимущества.</span>
+                    <span>Возможность рассрочки платежа</span>
                   </div>
                 </a>
               </div>
@@ -237,7 +238,7 @@ get_header(); ?>
                     <img src="<?bloginfo('template_url');?>/img/img9_4-min.png" alt="" />
                   </div>
                   <div class="benefit__descr">
-                    <span>Описание преимущества.</span>
+                    <span>качественное постгарантийное<br>обслуживание</span>
                   </div>
                 </a>
               </div>
@@ -254,7 +255,7 @@ get_header(); ?>
             </div>
           </div>
           <div class="col-half">
-            
+
             <h2 class="slide__title animated fadeInUp">В 1,5 раз больше пациентов</h2>
             <div class="slide__info animated fadeInUp delay-1">
               <p>
@@ -466,9 +467,9 @@ get_header(); ?>
           <div class="complect contain">
           <?if( get_field('set') ): $i=0; while ( has_sub_field('set') ) : $i++;?>
             <?if( get_row_layout() == 'content' ):?>
-            <div class="col-4 complect__item animated fadeInUp"  id="awesomeId">
+            <div class="col-4 complect__item animated fadeInUp tooltiper" data-toggle="tooltip" data-placement="left" data-html-text='<?the_sub_field('description');?>' title='<?the_sub_field('description');?>' id="awesomeId">
               <div class="complect__img"><img src="<?the_sub_field('img');?>" alt=""></div>
-              <div class="complect__name tooltiper" data-toggle="tooltip" data-placement="left" data-html-text='<?the_sub_field('description');?>' title='<?the_sub_field('description');?>'>
+              <div class="complect__name">
                 <p><?the_sub_field('title');?></p>
               </div>
             </div>

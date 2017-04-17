@@ -24,7 +24,6 @@ $(document).ready(function() {
   }, 'CLOSING');
 
   slideShow.subscr(function(prev, cur, prevIndex, curIndex) {
-    console.log(curIndex);
     if (curIndex != 0) {
       $('.header').addClass('top');
       $('.footer').addClass('bottom');
@@ -52,6 +51,7 @@ $(document).ready(function() {
       close: function( event, ui ) {
       }
     });
+    $("[data-toggle='tooltip']").tooltip("close");
     google.maps.event.trigger(map, 'resize');
   }, 'CLOSED');
 
@@ -82,13 +82,12 @@ $(document).ready(function() {
 ///touch events
 var hammertime = new Hammer(document.body);
 hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+hammertime.get('pinch').set({ enable: true });
 
   $(document).hammer().on('swipedown', function(event) {
-    console.log('prev');
     slideShow.prev();
   });
   $(document).hammer().on('swipeup', function(event) {
-    console.log('next');
     slideShow.next();
   });
 
@@ -136,9 +135,6 @@ hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
     $('#js__profit-input').val(Math.floor(clearProfit));
 
     $('.slider__handle').html('<span class="slider__price">'+price+'</price>');
-    console.log(peopleCount);
-    console.log(microscop);
-    console.log(price);
   }
   /////parallax
   $('#scene').parallax();
