@@ -120,7 +120,7 @@ function zeiss_scripts() {
 
 	// MyJS
 	wp_enqueue_script( 'zeiss-jquery-1.9.1', get_template_directory_uri() . '/js/jquery-1.9.1.js', array(), '20151215', true );
-	wp_enqueue_script( 'zeiss-jquery-1.9.1', get_template_directory_uri() . '/js/jquery.maskedinput.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'zeiss-jquery.maskedinput.min', get_template_directory_uri() . '/js/jquery.maskedinput.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'zeiss-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'zeiss-jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array(), '20151215', true );
 	wp_enqueue_script( 'zeiss-jquery.ui.touch-punch.min', get_template_directory_uri() . '/js/jquery.ui.touch-punch.min.js', array(), '20151215', true );
@@ -169,14 +169,4 @@ wp_enqueue_script('masked-input', get_template_directory_uri().'/js/jquery.maske
 }
 add_action('wp_footer', 'wpmidia_activate_masked_input');
 function wpmidia_activate_masked_input(){
-?>
-<script type="text/javascript">
-jQuery( function($){
-$(".data").mask("99/99/9999");
-$(".tel").mask("+7(999)-999-9999");
-$(".cpf").mask("999.999.999-99");
-$(".cnpj").mask("99.999.999/9999-99");
-});
-</script>
-<?php
 }

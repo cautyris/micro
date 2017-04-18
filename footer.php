@@ -48,5 +48,13 @@ function initMap() {
 		});
 	});
 </script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".data").mask("99/99/9999");
+	$(".tel").mask("+7(999)-999-9999");
+	$(".cpf").mask("999.999.999-99");
+	$(".cnpj").mask("99.999.999/9999-99");
+});
+</script>
 </body>
 </html>
